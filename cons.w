@@ -1,3 +1,5 @@
+(def nil 0)
+
 (defn cons [h t]
   (let [pos (malloc 8)]
     (mem32 pos h)

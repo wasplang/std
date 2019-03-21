@@ -50,7 +50,7 @@
                        item (tail item)])))))
 
 (deftest str_join_examples
-  (is (str_eq "" (str_join None ",")) "join empty should be empty string")
-  (is (str_eq "a" (str_join (cons "a" None) ",")) "join single item should be a")
-  (is (str_eq "a,b" (str_join (cons "a" (cons "b" None)) ",")) "join two items should be a,b")
-  (is (str_eq "a,b,c" (str_join (cons "a" (cons "b" (cons "c" None))) ",")) "join two items should be a,b"))
+  (is (str_eq "" (str_join nil ",")) "join empty should be empty string")
+  (is (str_eq "a" (str_join (cons "a" nil) ",")) "join single item should be a")
+  (is (str_eq "a,b" (str_join (cons "a" (cons "b" nil)) ",")) "join two items should be a,b")
+  (is (str_eq "a,b,c" (str_join (cons "a" (cons "b" (cons "c" nil))) ",")) "join two items should be a,b"))
