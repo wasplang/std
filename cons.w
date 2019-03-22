@@ -11,3 +11,8 @@
 
 (defn tail [c]
   (mem32 (+ c 4)))
+
+(defn is_empty [o] (== o nil) )
+
+(deftest cons_examples
+  (is (str_eq "a" (cons "a" nil) "head should be a")))

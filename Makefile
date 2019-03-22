@@ -1,5 +1,5 @@
 build:
-	wasp build
+	../../../target/debug/wasp build
 watch:
 	while true; do \
 	    make build; \
