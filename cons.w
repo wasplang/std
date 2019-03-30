@@ -1,16 +1,14 @@
-(def nil 0)
-
 (defn cons [h t]
-  (let [pos (malloc (* 2 SIZE_NUM))]
+  (let [pos (malloc (* 2 size_num))]
     (mem_num pos h)
-    (mem_num (+ pos SIZE_NUM) t)
+    (mem_num (+ pos size_num) t)
     pos))
 
 (defn head [c]
   (mem_num c))
 
 (defn tail [c]
-  (mem_num (+ c SIZE_NUM)))
+  (mem_num (+ c size_num)))
 
 (defn is_empty [o] (== o nil) )
 
