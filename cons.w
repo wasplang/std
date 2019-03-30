@@ -1,16 +1,16 @@
 (def nil 0)
 
 (defn cons [h t]
-  (let [pos (malloc 8)]
-    (mem32 pos h)
-    (mem32 (+ pos 4) t)
+  (let [pos (malloc 16)]
+    (mem_num pos h)
+    (mem_num (+ pos 8) t)
     pos))
 
 (defn head [c]
-  (mem32 c))
+  (mem_num c))
 
 (defn tail [c]
-  (mem32 (+ c 4)))
+  (mem_num (+ c 8)))
 
 (defn is_empty [o] (== o nil) )
 
