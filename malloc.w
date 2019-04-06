@@ -1,5 +1,7 @@
-(pub defn malloc [size]
-  (let [current_heap (mem_heap_end)]
-    (mem_num current_heap size)
-    (mem_heap_end (+ current_heap 9 size))
-    (+ current_heap 9)))
+pub fn malloc(size){
+  current_heap = mem_heap_end()
+  mem_num(current_heap,size)
+  header_size = (size + (2 * size_num))
+  mem_heap_end((current_heap + header_size))
+  (current_heap + header_size)
+}

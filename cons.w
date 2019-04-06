@@ -1,16 +1,18 @@
-(defn cons [h t]
-  (let [pos (malloc (* 2 size_num))]
-    (mem_num pos h)
-    (mem_num (+ pos size_num) t)
-    pos))
+fn cons(h,t){
+  pos = malloc((2 * size_num))
+  mem_num(pos,h)
+  mem_num((pos + size_num),t)
+  pos
+}
 
-(defn head [c]
-  (mem_num c))
+fn head(c){
+  mem_num(c)
+}
 
-(defn tail [c]
-  (mem_num (+ c size_num)))
+fn tail(c){
+  mem_num((c + size_num))
+}
 
-(defn is_empty [o] (== o nil) )
-
-(deftest cons_examples
-  (is (str_eq "a" (cons "a" nil) "head should be a")))
+fn is_empty(o){
+  (o == nil)
+}
